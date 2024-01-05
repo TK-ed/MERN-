@@ -1,0 +1,100 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: cornsilk;
+      }
+      .name {
+        border-radius: 2px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-style: dashed;
+      }
+      .pass {
+        border-radius: 2px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-style: dashed;
+      }
+      input[type="checkbox"]::before {
+        border-radius: 10px;
+        background-color: aliceblue;
+      }
+      btn::before {
+        border-color: beige;
+        border-radius: 10px;
+      }
+      btn::hover{
+        background-color: black;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <form class="form" action="submit">
+        <label for="name">Username :</label>
+        <input class="name" type="text" name="user_name" id="name"> <br> <br>
+        <label for="password"> Password :</label>
+        <input class="pass" type="password" name="password" id="password"> <br> <br>
+        <input type="button" value="submit"> <br><br>
+        <input type="radio" name="try1" id="radio"> <br><br>
+        <label for="user_name">Type1</label>
+        <input type="checkbox" name="try2" id="checkbox"><br><br>
+        <label for="user_name">Type2</label>
+        <input type="checkbox" name="try2" id="checkbox"><br><br>
+        <input type="submit" value="submit"><br><br>
+    </form> -->
+    <form onsubmit="alert('Clicked')">
+      <label for="name">Name: </label>
+      <input class="name" type="text" name="name" id="name" required /> <br />
+      <br />
+      <label>ID: </label>
+      <input class="pass" type="number" name="rollno" id="rollno" required />
+      <br />
+      <br />
+      <label for="name">Class: </label>
+      <input type="radio" name="class" />
+      <label for="name">A</label>
+      <input type="radio" name="class" />
+      <label for="name">B</label>
+      <input type="radio" name="class" />
+      <label for="name">C</label> <br />
+      <br />
+      <label for="name">Movies: </label>
+      <select class="list" name="movies" id="movies" autofocus required>
+        <option value="None" selected hidden></option>
+        <option value="one">Animal</option>
+        <option value="one">Salar</option>
+        <option value="one">Chiththa</option>
+      </select>
+      <br />
+      <br />
+      <label for="name">Snamcks: </label>
+      <input type="checkbox" name="snacks" id="one" />
+      <label for="name">Ice-cream</label>
+      <input type="checkbox" name="snacks" id="one" />
+      <label for="name">Sweet-corn</label>
+      <input type="checkbox" name="snacks" id="one" />
+      <label for="name">Popcorn</label> <br />
+      <br /><br />
+      <textarea
+        name="area"
+        id=""
+        cols="30"
+        rows="5"
+        placeholder="Enter your text here!!"
+      ></textarea>
+      <br /><br />
+      <button class="btn" type="button" onclick="alert('Clicked')">
+        Add!!
+      </button>
+    </form>
+  </body>
+</html>

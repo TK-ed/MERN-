@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function fn() {
+        let char = prompt("Enter the character:");
+        if (parseInt(char)){
+            alert(`${char} must be an alphabet!!`)
+        }
+        switch (char) {
+          case "V" || "v":
+            alert(`${char} is in Rainbow`);
+            console.log(`${char} is in Rainbow`)
+            break;
+          case "I" || "i":
+            alert(`${char} is in Rainbow`);
+            break;
+          case "B" || "b":
+            alert(`${char} is in Rainbow`);
+            break;
+          case "g" || "G":
+            alert(`${char} is in Rainbow`);
+            break;
+          case "Y" || "y":
+            alert(`${char} is in Rainbow`);
+            break;
+          case "O" || "o":
+            alert(`${char} is in Rainbow`);
+            break;
+          case "R" || "r":
+            alert(`${char} is in Rainbow`);
+            break;
+          default:
+            alert(`${char} is not in Rainbow`);
+            break;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      <button onclick="fn()">Click me!!</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+Head
+    title
+    style
+    Link
+    Script
+    meta
+    base
+
+Text-Formatting
+    h1 - h6
+    bold / strong
+    small -> Copyrights and references content 
+    span
+    sup
+
+Link
+
+List
+    li
+    ol
+    ul
+
+Table
+
+
+Form 
+    label -> for, name
+    input -> type, name, id, button
+         => submit (value)
+         => radio
+         => checkbox
+    select
+        option -> value
+
+
+Script
+
+
+Image and Object
