@@ -38,11 +38,13 @@ function objects() {
   address.objFunction();
 
   async function fetching() {
-    const response = fetch(
-      "https://catfact.ninja/fact"
-    ).then((res) => {
-      (res.json()).then((res) => console.log(`ram: ${res.fact}, gomtha: ${res['length']}`));
-    });
+    // const response = fetch(
+    //   "https://catfact.ninja/fact"
+    // ).then((res) => {
+    //   (res.json()).then((res) => console.log(`ram: ${res.fact}, gomtha: ${res['length']}`));
+    // });
+    const resp = await fetch("https://catfact.ninja/fact")
+    console.log(resp.text);
   }
   fetching();
 

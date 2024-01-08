@@ -1,0 +1,49 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+    </style>
+  </head>
+  <body>
+    <!-- <input class="input" type="number" name="number" /> -->
+    <input class="input" type="text" name="number" />
+    <input class="input" type="text" name="number" />
+    <input onclick="table()" type="button" value="check" />
+    <p class="output"></p>
+    <p id="name">hellow</p>
+    <table border="2px solid" class="table">
+      <tr>
+        <th>head1</th>
+        <th>head2</th>
+      </tr>
+      <tr>
+        <td>value1</td>
+        <td>value2</td>
+      </tr>
+    </table>
+    <script>
+        function verify() {
+            var n = document.querySelector(".input").value;
+            let x = document.querySelector(".output");
+    
+            let l = document.createElement("p");
+            l.innerHTML = "hellow";
+            document.body.appendChild(l);
+            r = document.getElementById("name");
+            r.remove();
+            if (n > 0 && n <= 10) {
+              x.innerHTML = `OOOOOOOOKKKK`;
+              console.log(x);
+            } else x.innerText = `InvAAAAAlid`;
+          }
+      function table() {
+        i1 = document.querySelectorAll(".input")[0].value
+        i2 = document.querySelectorAll(".input")[1].value
+        let y = document.getElementsByClassName("table")[0];
+        y.innerHTML += `<tr><td>${i1}</td><td>${i2}</td></tr>`
+      }
+    </script>
+  </body>
+</html>

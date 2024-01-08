@@ -1,0 +1,35 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button:hover {
+        background-color: #b48989;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      btn = document.createElement("button");
+      btn.setAttribute("class", "btn");
+      btn.style = "border: 2px solid; border-radius: 2px;";
+      btn.innerHTML = "click me";
+      document.body.append(btn);
+      document.body.style = "background-color: #abdcdc";
+      console.log(btn);
+      div = document.createElement("div");
+      document.body.append(div);
+      div.setAttribute("class", "box");
+      btn.addEventListener("click", animate);
+      div.style =
+        "width: 120px; height: 120px; background-color: aliceblue; border: 2px;";
+
+      function animate() {
+        box = document.getElementsByClassName("box")[0];
+        box.style =
+          "height: 15%; width:7%; background-color: #ac514f; transform: translate(88rem, 38rem); transition-duration : 2.69s;";
+      }
+    </script>
+  </body>
+</html>
