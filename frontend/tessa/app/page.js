@@ -1,14 +1,15 @@
 "use client";
 
 import axios from "axios";
-import Comp1 from "./components/c1";
-import Comp2 from "./components/c2";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Reducer from "./components/c3";
+import Link from "next/link";
 
 export default function Home() {
-  const [item, setItem] = useState("")
-  const [value, setValue] = useState(0)
-  
+  const [item, setItem] = useState("");
+  const [value, setValue] = useState(0);
+  const [text, setText] = useState("Hello");
+
   const scrape = async (event) => {
     event.preventDefault();
     console.log(item);
@@ -24,18 +25,22 @@ export default function Home() {
     }
   };
 
-  const increment = () => {
-    setValue((val)=>val+1)
-    console.log(value);
-  };
-  
-  const decrement = () => {
-    setValue(() => value-1)
-  }
+  // const increment = () => {
+  //   setValue((val) => val + 1);
+  //   console.log(value);
+  // };
+
+  // const decrement = () => {
+  //   setValue(() => value - 1);
+  // };
+
+  // const click = () => {
+  //   setText(() => console.log(text));
+  // };
 
   return (
     <main className="text-center">
-      <div>
+      {/* <div>
         <h3 className="mb-3 mt-7">
           Find your desired product at a <span>low cost</span>
         </h3>
@@ -75,11 +80,24 @@ export default function Home() {
         >
           Subtract!!
         </button>
-
+        <br />
         {value}
-        {/* <Comp1 name="Ram" dept="CSE"/>
-        <Comp2 name="Sugi" dept="Kovai"/> */}
-      </div>
+        <button
+          type="button"
+          onClick={decrement}
+          className="p-1 border-2 border-[#FFFFFF] rounded-full hover:bg-[#EEEEEE] hover:opacity-69 hover:text-[#000000]"
+        >
+          Check!!
+        </button>
+        <br />
+        {value}
+      </div> */}
+      <Reducer />
+      <br />
+      <Link href={"/todo"}>Click me</Link>
+      {/* <div className="one">
+        <div className="two"></div>
+      </div> */}
     </main>
   );
 }
